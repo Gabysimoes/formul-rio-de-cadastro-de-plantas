@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário planta</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    
+    <script src="fontawesome/js/all.min.js"></script>
+
+
+       <script>
+        function salvar(){
+
+            let form = document.getElementById("form-cadastro")
+            let nomeplanta = form.nomeplanta.value
+            let especie = form.especie.value
+            let altura = form.altura.value
+         
+         if (nomeplanta.trim() == ""){
+             
+            alert('Preencha o campo nome da planta')
+             return false
+         }
+
+         if (especie.trim() == ""){
+             alert('Preencha o campo espécie')
+             return false
+         }
+
+         if (altura.trim() == ""){
+             alert('Preencha o campo altura')
+             return false
+         }
+
+
+         alert("Cadastrado com sucesso!")
+        }
+
+
+    </script> 
+
+
+</head>
+<body>
+
+<div class="container-page" id="container">
+    <div class="login-container" id="login">
+        <h1>Cadastro de Plantas</h1>
+        <form id="form-cadastro" onsubmit="return false">
+            <div class="input-line-container">
+                <span class="name-input">Nome da Planta:</span>             
+                <input type="text" name="nomeplanta" id="" class="input-line" >
+            </div>
+            <div class="input-line-container">
+                <span class="name-input">Espécie:</span>             
+                <input type="text" name="especie" id="" class="input-line" >
+            </div>
+            <div class="input-line-container">
+                <span class="name-input">Altura máxima:</span>             
+                <input type="number" name="altura" id="" class="input-line" >
+            </div>
+            <input type="submit" name="enviar" value="Cadastrar" onclick="salvar()"> 
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+</body>
+    
+</body>
+</html>
